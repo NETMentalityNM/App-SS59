@@ -228,19 +228,17 @@
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Pasien
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
           <li class="nav-item">
             <a href="../widgets.html" class="nav-link">
-              <i class="nav-icon fas fa-th"></i>
+              <i class="nav-icon fas fa-notes-medical"></i>
               <p>
                 Data Rekam Medik
-                <span class="right badge badge-danger">New</span>
               </p>
             </a>
           </li>
