@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PasienController;
+use App\Http\Controllers\JabatanController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,7 +24,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
-
+    //Manajemen Jabatan
     Route::get('/Pasien', [PasienController::class, 'index'])->name('psn');
     Route::get('/Pasien/form', [PasienController::class, 'create'])->name('tmb_psn');
 });
