@@ -35,23 +35,26 @@
         </div>
       </div>
       <div class="card-body">
-        <table class="table table-success table-striped">
-            <thead>
-              <tr>
-                <th scope="col">ID</th>
-                <th scope="col">No. Rekam Medik</th>
-                <th scope="col">No. Kartu</th>
-                <th scope="col">Tgl Berobat</th>
-                <th scope="col">Diagnosa</th>
-                <th scope="col">Action</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                
-                
-            </tbody>
-          </table>
+        <form method="POST" action="/rekam-medik">
+            @csrf
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">No. Rekam Medik</label>
+              <input type="number" name="No_rekmed" class="form-control" id="exampleInputEmail1" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">No. Kartu</label>
+              <input type="text" name="No_kartu" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Tanggal Berobat</label>
+              <input type="date" name="tgl_brobat" class="form-control" id="exampleInputPassword1"  required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Diagnosa</label>
+              <input type="text" name="Diagnosa" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Add</button>
+          </form>
       </div>
       
       <!-- /.card-footer-->

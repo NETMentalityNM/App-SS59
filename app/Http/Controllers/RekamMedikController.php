@@ -36,7 +36,15 @@ class RekamMedikController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $rekamMedik = new RekamMedik;
+
+        $rekamMedik->no_rekmed = $request->No_rekmed;
+        $rekamMedik->no_kartu = $request->No_kartu;
+        $rekamMedik->tgl_berobat = $request->tgl_brobat;
+        $rekamMedik->diagnosa = $request->Diagnosa;
+        $rekamMedik->save();
+
+        return redirect('/rekam-medik');
     }
 
     /**

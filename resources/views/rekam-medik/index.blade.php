@@ -49,10 +49,11 @@
             <tbody>
               <tr>
                 @foreach ($rekamMedik as $item)
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <th scope="row">{{$nomor++}}</th>
+                <td>{{$item->no_rekmed}}</td>
+                <td>{{$item->no_kartu}}</td>
+                <td>{{$item->tgl_berobat}}</td>
+                <td>{{$item->diagnosa}}</td>
                 <td>
                     <a href="" class="btn btn-sm btn-info">Edit</a>
                     <a href="" class="btn btn-sm btn-danger">Hapus</a>

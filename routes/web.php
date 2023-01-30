@@ -29,6 +29,7 @@ Route::middleware('auth')->group(function () {
     //Manajemen Rekam-Medik
     Route::get('/rekam-medik', [RekamMedikController::class, 'index']);
     Route::get('/rekam-medik/form', [RekamMedikController::class, 'create']);
+    Route::post('/rekam-medik', [RekamMedikController::class, 'store']);
 
 
 
