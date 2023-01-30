@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Pasien;
 use Illuminate\Http\Request;
 
-class PasienController extends Controller
+class JabatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +13,7 @@ class PasienController extends Controller
      */
     public function index()
     {
-        $psn = Pasien::all();
-        return view('Pasien.index', compact('psn'));
+        //
     }
 
     /**
@@ -25,7 +23,7 @@ class PasienController extends Controller
      */
     public function create()
     {
-        return view('Pasien.form');
+        //
     }
 
     /**

@@ -196,7 +196,7 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+              with font-awesome or any other icon font library -->
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -227,7 +227,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="{{route('psn')}}" class="nav-link">
+            <a href="../widgets.html" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Pasien
@@ -255,13 +255,12 @@
     <section class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Blank Page</h1>
+          <div class="">
+            <h1 class="">Data Pasien RSIA</h1>
           </div>
-          <div class="col-sm-6">
+          <div class="">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Blank Page</li>
             </ol>
           </div>
         </div>
@@ -305,7 +304,7 @@
     <div class="float-right d-none d-sm-block">
       <b>Version</b> 3.2.0
     </div>
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2014-2021 <a href="https://github.com/NETMentalityNM">NETMentalityNM</a>.</strong> All rights reserved.
   </footer>
 
   <!-- Control Sidebar -->
