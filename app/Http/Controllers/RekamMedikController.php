@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\RekamMedik;
 
 class RekamMedikController extends Controller
 {
@@ -12,8 +13,9 @@ class RekamMedikController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {   $nomor = 1;
+        $rekamMedik = RekamMedik::all();
+        return view('rekam-medik.index', compact('nomor', 'rekamMedik'));
     }
 
     /**
@@ -23,7 +25,7 @@ class RekamMedikController extends Controller
      */
     public function create()
     {
-        //
+        return view('rekam-medik.form');
     }
 
     /**

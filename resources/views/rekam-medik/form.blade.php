@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('judul' ,'Data Rekam Medik')
+@section('judul' ,'Form Data Rekam Medik')
 @section('content-header')
 <section class="content-header">
     <div class="container-fluid">
@@ -23,7 +23,7 @@
     <!-- Default box -->
     <div class="card">
       <div class="card-header">
-        <a href="/rekam-medik/form" class="btn btn-primary">Tambah Data</a>
+       
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -48,17 +48,7 @@
             </thead>
             <tbody>
               <tr>
-                @foreach ($rekamMedik as $item)
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>
-                    <a href="" class="btn btn-sm btn-info">Edit</a>
-                    <a href="" class="btn btn-sm btn-danger">Hapus</a>
-                </td>
-              </tr>
-                @endforeach
+                
                 
             </tbody>
           </table>

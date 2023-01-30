@@ -235,7 +235,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/rekam-medik" class="nav-link">
               <i class="nav-icon fas fa-notes-medical"></i>
               <p>
                 Data Rekam Medik
@@ -267,7 +267,7 @@
         </div>
       </div><!-- /.container-fluid -->
     </section> --}}
-    
+
     @yield('content-header')
 
     <!-- Main content -->
