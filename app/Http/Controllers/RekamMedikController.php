@@ -99,6 +99,9 @@ class RekamMedikController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $rekamMedik = RekamMedik::find($id);
+        $rekamMedik->delete();
+
+        return redirect ('/rekam-medik');
     }
 }

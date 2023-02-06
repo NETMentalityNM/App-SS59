@@ -32,9 +32,12 @@ Route::middleware('auth')->group(function () {
     Route::post('/rekam-medik', [RekamMedikController::class, 'store']);
     Route::get('/rekam-medik/edit/{id}', [RekamMedikController::class, 'edit']);
     Route::put('/rekam-medik/{id}', [RekamMedikController::class, 'update']);
-
-
-
-    Route::get('/Pasien', [PasienController::class, 'index'])->name('psn');
-    Route::get('/Pasien/form', [PasienController::class, 'create'])->name('tmb_psn');
+    Route::delete('/rekam-medik/{id}', [RekamMedikController::class, 'destroy']);
+    
+    Route::get('/pasien', [PasienController::class, 'index']);
+    Route::get('/pasien/form', [PasienController::class, 'create']);
+    Route::post('/pasien', [PasienController::class, 'store']);
+    Route::get('/pasien/edit/{id}', [PasienController::class, 'edit']);
+    Route::put('/pasien/{id}', [PasienController::class, 'update']);
+    Route::delete('/pasien/{id}', [PasienController::class, 'destroy']);
 });

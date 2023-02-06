@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Pasien;
+use App\Models\RekamMedik;
+
 use Illuminate\Http\Request;
+
 
 class PasienController extends Controller
 {
@@ -14,8 +17,9 @@ class PasienController extends Controller
      */
     public function index()
     {
+        $nomor = 1;
         $psn = Pasien::all();
-        return view('Pasien.index', compact('psn'));
+        return view('Pasien.index', compact('nomor','psn'));
     }
 
     /**
@@ -25,7 +29,8 @@ class PasienController extends Controller
      */
     public function create()
     {
-        return view('Pasien.form');
+        $psn = RekamMedik::all();
+        return view('Pasien.form', compact('psn'));
     }
 
     /**
@@ -36,7 +41,20 @@ class PasienController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $psn = new Pasien();
+
+        $psn->no_kartu = $request->No_kartu;
+        $psn->nik_pas = $request->Nik_pasien;
+        $psn->nm_pas = $request->nama_pas;
+        $psn->umur_pas = $request->umur;
+        $psn->rekam_mediks_id = $request->diagnosa;
+        $psn->hp_pas = $request->no_hp;
+        $psn->alamat_pas = $request->alamat_pasien;
+        $psn->status_pas = $request->status_pasien;
+        $psn->foto = "default.jpg";
+        $psn->save();
+
+        return redirect('/pasien');
     }
 
     /**

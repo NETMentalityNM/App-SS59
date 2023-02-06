@@ -17,12 +17,13 @@ return new class extends Migration
             $table->id();  // Kalau ingin membuat relasi, maka tipenya adalah bigInteger
             $table->integer('no_kartu')->unique();
             $table->integer('nik_pas');
-            $table->string('nim_pas');
             $table->string('nm_pas');
             $table->integer('umur_pas');
+            $table->bigInteger('rekam_mediks_id');
             $table->integer('hp_pas');
             $table->string('alamat_pas');
             $table->string('status_pas');
+            $table->string('foto');
             $table->timestamps();
         });
     }

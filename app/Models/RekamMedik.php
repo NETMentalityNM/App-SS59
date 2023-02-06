@@ -7,5 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class RekamMedik extends Model
 {
-    use HasFactory;
+    public function pasien()
+    {
+        return $this->belongsTo(Pasien::class);
+    }
 }
