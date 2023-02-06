@@ -55,7 +55,7 @@
                 <td>{{$item->tgl_berobat}}</td>
                 <td>{{$item->diagnosa}}</td>
                 <td>
-                    <a href="" class="btn btn-sm btn-info">Edit</a>
+                    <a href="/rekam-medik/edit/{{$item->id}}" class="btn btn-sm btn-info">Edit</a>
                     <a href="" class="btn btn-sm btn-danger">Hapus</a>
                 </td>
               </tr>

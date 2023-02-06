@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/rekam-medik', [RekamMedikController::class, 'index']);
     Route::get('/rekam-medik/form', [RekamMedikController::class, 'create']);
     Route::post('/rekam-medik', [RekamMedikController::class, 'store']);
+    Route::get('/rekam-medik/edit/{id}', [RekamMedikController::class, 'edit']);
+    Route::put('/rekam-medik/{id}', [RekamMedikController::class, 'update']);
 
 
 

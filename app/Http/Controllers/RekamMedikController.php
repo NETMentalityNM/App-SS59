@@ -67,7 +67,8 @@ class RekamMedikController extends Controller
      */
     public function edit($id)
     {
-        //
+        $rekamMedik = RekamMedik::find($id);
+        return view('rekam-medik.edit', compact('rekamMedik'));
     }
 
     /**
@@ -79,7 +80,15 @@ class RekamMedikController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $rekamMedik = RekamMedik::find($id);
+
+        $rekamMedik->no_rekmed = $request->No_rekmed;
+        $rekamMedik->no_kartu = $request->No_kartu;
+        $rekamMedik->tgl_berobat = $request->tgl_brobat;
+        $rekamMedik->diagnosa = $request->Diagnosa;
+        $rekamMedik->save();
+
+        return redirect('/rekam-medik');
     }
 
     /**
