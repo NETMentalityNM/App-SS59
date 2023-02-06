@@ -13,7 +13,8 @@ class RekamMedikController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {   $nomor = 1;
+    {   
+        $nomor = 1;
         $rekamMedik = RekamMedik::all();
         return view('rekam-medik.index', compact('nomor', 'rekamMedik'));
     }

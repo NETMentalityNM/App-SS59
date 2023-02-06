@@ -227,7 +227,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/Pasien" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Pasien
@@ -235,7 +235,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/rekam-medik" class="nav-link">
               <i class="nav-icon fas fa-notes-medical"></i>
               <p>
                 Data Rekam Medik
