@@ -64,7 +64,7 @@
                 <td>{{$item->status_pas}}</td>
                 <td>{{$item->foto}}</td>
                 <td>
-                    <a href="/rekam-medik/edit/{{$item->id}}" class="btn btn-sm btn-info">Edit</a>
+                    <a href="/pasien/edit/{{$item->id}}" class="btn btn-sm btn-info">Edit</a>
                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
                       Hapus
                     </button>
@@ -85,7 +85,7 @@
                           {{-- Proses Hapus --}}
                           <div class="modal-footer justify-content-between">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Batal</button>
-                          <form action="/rekam-medik/{{$item->id}}" method="POST">
+                          <form action="/pasien/{{$item->id}}" method="POST">
                             @method('DELETE')
                             @csrf
                             <button type="submit" class="btn btn-primary">Yakin</button>

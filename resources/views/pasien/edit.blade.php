@@ -1,11 +1,11 @@
 @extends('layouts.master')
-@section('judul' ,'Edit Data Rekam Medik')
+@section('judul' ,'Form Data Rekam Medik')
 @section('content-header')
 <section class="content-header">
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Edit Data Rekam Medik</h1>
+          <h1>Data Rekam Medik</h1>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
@@ -35,25 +35,46 @@
         </div>
       </div>
       <div class="card-body">
-        <form method="POST" action="/rekam-medik/{{$rekamMedik->id}}">
-          @method('PUT')  {{-- Khusus Methode Edit--}}
+        <form method="POST" action="/pasien/{{$psn->id}}">
+          @method('PUT')
             @csrf
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">No. Rekam Medik</label>
-              <input type="number" readonly value="{{$rekamMedik->no_rekmed}}" name="No_rekmed" class="form-control" id="exampleInputEmail1" required>
-                              {{-- ^^^^^^ --}}
-            </div>              {{--Hanya Bisa dibaca/Tdk bisa diedit--}} 
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">No. Kartu</label>
-              <input type="text" name="No_kartu" value="{{$rekamMedik->no_kartu}}" class="form-control" id="exampleInputPassword1" required>
+              <label for="exampleInputEmail1" class="form-label">No. Kartu</label>
+              <input type="number" value="{{$psn->no_kartu}}" name="No_kartu" class="form-control" id="exampleInputEmail1" required>
             </div>
             <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Tanggal Berobat</label>
-              <input type="date" name="tgl_brobat" value="{{$rekamMedik->tgl_berobat}}" class="form-control" id="exampleInputPassword1"  required>
+              <label for="exampleInputPassword1" class="form-label">NIK Pasien</label>
+              <input type="number" value="{{$psn->nik_pas}}"  name="Nik_pasien" class="form-control" id="exampleInputPassword1" required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Nama Pasien</label>
+              <input type="text" value="{{$psn->nm_pas}}" name="nama_pas" class="form-control" id="exampleInputPassword1"  required>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Umur</label>
+              <input type="number" value="{{$psn->umur_pas}}" name="umur" class="form-control" id="exampleInputPassword1" required>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Diagnosa</label>
-              <input type="text" name="Diagnosa" value="{{$rekamMedik->diagnosa}}" class="form-control" id="exampleInputPassword1" required>
+              <select name="diagnosa" class="form-control" id="">
+                <option value="">--Pilih Diagnosa --</option>
+                @foreach ($rekamMedik as $data)
+                <option value="{{$data->id}}" @selected($psn->rekam_mediks_id == $data->id)> {{$data->no_rekmed}} {{$data->diagnosa}}</option>
+                @endforeach
+              </select>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">No. HP</label>
+                <input type="number" value="{{$psn->hp_pas}}" name="no_hp" class="form-control" id="exampleInputPassword1" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Alamat Pasien</label>
+                <input type="text" value="{{$psn->alamat_pas}}" name="alamat_pasien" class="form-control" id="exampleInputPassword1" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Status</label>
+                <input type="text" value="{{$psn->status_pas}}" name="status_pasien" class="form-control" id="exampleInputPassword1" required>
+              </div>
+              
             </div>
             <button type="submit" class="btn btn-primary">Edit</button>
           </form>

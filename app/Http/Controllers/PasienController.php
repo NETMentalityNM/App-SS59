@@ -76,7 +76,9 @@ class PasienController extends Controller
      */
     public function edit($id)
     {
-        //
+        $psn = Pasien::find($id);
+        $rekamMedik = RekamMedik::all();
+        return view('pasien.edit', compact('psn', 'rekamMedik'));
     }
 
     /**
@@ -88,7 +90,20 @@ class PasienController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $psn = Pasien::find($id);
+
+        $psn->no_kartu = $request->No_kartu;
+        $psn->nik_pas = $request->Nik_pasien;
+        $psn->nm_pas = $request->nama_pas;
+        $psn->umur_pas = $request->umur;
+        $psn->rekam_mediks_id = $request->diagnosa;
+        $psn->hp_pas = $request->no_hp;
+        $psn->alamat_pas = $request->alamat_pasien;
+        $psn->status_pas = $request->status_pasien;
+        $psn->foto = "default.jpg";
+        $psn->save();
+
+        return redirect('/pasien');
     }
 
     /**
