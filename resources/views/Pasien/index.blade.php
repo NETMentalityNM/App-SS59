@@ -62,7 +62,7 @@
                 <td>{{$item->hp_pas}}</td>
                 <td>{{$item->alamat_pas}}</td>
                 <td>{{$item->status_pas}}</td>
-                <td>{{$item->foto}}</td>
+                {{-- <td>{{$item->foto}}</td> --}}
                 <td>
                     <a href="/pasien/edit/{{$item->id}}" class="btn btn-sm btn-info">Edit</a>
                     <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default{{$item->id}}">
